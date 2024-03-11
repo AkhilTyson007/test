@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<br><br>
+
+    <form class="" method='POST' enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label for="pub_date"> Published Date : </label>
+        <input type="date" name="pub_date" id="pub_date" required><br><br>
+
+        <label for="product_type"> Product Type : </label>
+        <input type="text" name="product_type" id="product_type" required><br><br>
+
+        <label for="image"> Image : </label>
+        <input type="file" name="image" id="image"><br><br>
+
+        <label for="video"> Video : </label>
+        <input type="file" name="video" id="video"><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    {% include "messages.html" %}
+
+{% endblock content %}
+
+
+

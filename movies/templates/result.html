@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+    <h1 style='text-align:center'> Addition </h1>
+{% block content %}
+    
+    {% include "navbar.html" %}
+    <br><br><br>
+    {% if res %}
+        <h1 style='text-align:center'> Sum = {{ res }} </h1>
+    {% endif %}
+
+    <br><br> <a href="{% url "add" %}"> Perform next op </a>
+    
+{% endblock content %}

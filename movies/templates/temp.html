@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br><br><br>
+    <form style='text-align:center' action='{% url "result" %}' method="post">
+        {% comment %} cross site request forgery {% endcomment %}
+        {% csrf_token %}    
+        <label for="num1">Number 1</label>
+        <input type="number" name="num1" id="num1" required><br><br>
+        <label for="num2">Number 2</label>
+        <input type="number" name="num2" id="num2" required><br><br><br>
+        <input type="submit" value="Add"><br>
+    </form>
+
+{% endblock content %}
+
